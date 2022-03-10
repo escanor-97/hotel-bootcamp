@@ -1,6 +1,0 @@
-
-npx sequelize-cli model:generate --name TypeEmployee --attributes name:string
-
-npx sequelize-cli model:generate --name Employee --attributes name:string,lastName:String,cellphone:string,email:string,username:string,password:string,id_typeEmployee:integer
-
-sequelize-cli migration:generate --name employee-typeEmployee

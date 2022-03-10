@@ -14,7 +14,15 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   TypeEmployee.init({
-    name: DataTypes.STRING
+    name: {
+      type: DataTypes.STRING,
+      validate: {
+        isAlpha: {
+          args: true,
+          msg: "Only words are allowed"
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'TypeEmployee',
