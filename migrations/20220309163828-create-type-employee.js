@@ -10,14 +10,7 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING,
-        allowNull: false,
-        validate: {
-          isEven: function (value) {
-            if (parseInt(value)) {
-              throw new Error('Only Characters allowed!');
-            }
-          }
-        }
+        allowNull: false
       },
       createdAt: {
         allowNull: false,
