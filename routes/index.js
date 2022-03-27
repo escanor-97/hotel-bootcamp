@@ -12,7 +12,9 @@ module.exports = (app) => {
   app.get('/api/typeEmployees/', typeEmployeeController.show);
   app.get('/api/typeEmployees/:id', typeEmployeeController.showById);
   app.put('/api/typeEmployees/:id', typeEmployeeController.update);
+  app.delete('/api/typeEmployees/:id', typeEmployeeController.delete);
 
-  app.post('/api/employees/', employeeController.create);
+  app.post('/api/employees/login', employeeController.create);
+  app.get('/api/employees/sing', employeeController.singIn);
   app.get('/api/employees/', employeeController.show);
 }

@@ -33,5 +33,14 @@ module.exports = {
     )
       .then(typeEmployee => res.status(200).send(typeEmployee))
       .catch(error => res.status(400).send(error));
+  },
+  delete(req, res) {
+    let { id } = req.params;
+    // let { name } = req.body;
+    return typeEmployee.destroy(
+      { where: { id: id } }
+    )
+      .then(typeEmployee => res.status(200).send(typeEmployee))
+      .catch(error => res.status(400).send(error));
   }
 }
