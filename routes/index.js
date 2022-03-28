@@ -14,7 +14,7 @@ module.exports = (app) => {
   app.put('/api/typeEmployees/:id', typeEmployeeController.update);
   app.delete('/api/typeEmployees/:id', typeEmployeeController.delete);
 
-  app.post('/api/employees/login', employeeController.create);
-  app.get('/api/employees/sing', employeeController.singIn);
+  app.post('/api/employees/singup', employeeController.singup);
+  app.post('/api/employees/login', employeeController.login);
   app.get('/api/employees/', employeeController.show);
 }
