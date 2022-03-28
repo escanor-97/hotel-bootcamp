@@ -34,6 +34,8 @@ module.exports = {
       })
       .catch(error => res.status(400).send(error));
   },
+
+
   show(_, res) {
     return employee.findAll({
       include: [{ model: typeEmployee }]
@@ -62,10 +64,7 @@ module.exports = {
             token: token,
             msg: `Welcome ${username}`
           })
-
-
         } else {
-
           // Unauthorized Access
           res.status(401).json({ msg: "Incorrect password" })
         }

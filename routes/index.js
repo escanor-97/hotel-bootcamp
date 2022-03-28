@@ -17,4 +17,7 @@ module.exports = (app) => {
   app.post('/api/employees/singup', employeeController.singup);
   app.post('/api/employees/login', employeeController.login);
   app.get('/api/employees/', employeeController.show);
+
+  // app.put('/api/employees/:id', employeeController.login);
+  // app.delete('/api/employees/:id', employeeController.login);
 }
